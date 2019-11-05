@@ -25,7 +25,7 @@ footer {
 	margin-left : 40px; 
 }
 #text {
-	text-align: center;
+	text-align: left;
 	font-size: 25px;
 	width : 500px;
 	height: 30px;
@@ -120,7 +120,7 @@ footer {
 	user-select: none;
 	  display: grid; 
 }
-#checked{
+.checked{
 	 background: #888;
   color: #fff;
   text-decoration: line-through;
@@ -132,7 +132,6 @@ footer {
 #LISTA:hover {
 	 background: #ddd;
 }
-checked
 #H1 {
 	position: relative;
 	font-family: comfortaa;	
@@ -152,6 +151,7 @@ checked
 
 }*/
 @keyframes Title {
+
  0%    {color: red;
  		font-size:51px ;
  }
@@ -166,12 +166,14 @@ checked
   }
 }
 #H4 {
+
 	position: relative;
 	font-family: oswald;
-margin: 0px 0px 0px 700px;
-padding : 0px;
+	margin: 0px 0px 0px 700px;
+	padding : 0px;
 
-}
+		}
+
 /*#list {
 	font-family: Comfortaa;
 border: 5px solid #b39f7a;
@@ -192,20 +194,28 @@ border: 5px solid #b39f7a;
 		}
 		#list {
 		}
-		#DATE{
-			margin: 0px 0px 30px 1600px;  
+		#DATE {
+			font-size:40px; 
+			margin: 0px 0px 30px 1000px;  
 			width: 800px;
 			height:100px;
 			font-family: Comfortaa;
 			
 		}
-/*ul li.checked {
+		#time{
+			font-size:40px 
+			color
+		}
+		#span{
+			color: red;
+		}
+ul li.checked {
   background: #888;
   color: #fff;
   text-decoration: line-through;
 }
 
-ul li #checked::before {
+ul li .checked::after {
   content: '';
   position: absolute;
   border-color: #fff;
@@ -218,4 +228,3 @@ ul li #checked::before {
   width: 7px;
 }
 
-*/

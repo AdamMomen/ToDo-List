@@ -20,12 +20,19 @@ $('#text').keypress(function(event) {
 						$('#text').val('');
 	 						myTodoList.add(value);
 	 						var time = new Date();
-       		  		 			$("#list").prepend('<li id="LISTA">' + value + ' ' +'<h6 id="H6">'+time.getHours() +': ' + time.getMinutes()  + '</h6></li>');
+       		  		 			$("#list").prepend('<li id="LISTA">' + value + ' ' +'<h6 id="H6">'+time.getHours() +' : ' + time.getMinutes()  + '</h6></li>');
 		}
 	}
-
  event.stopPropagation();
 });
+///////////
+$("ul").on("click", "li", function(){
+    $('#LISTA').toggle('.checked');;
+});
+////
+ // $("ul").click(function(){
+ //            $('#LISTA').wrap("<strike>");
+ //        });
 ///////////
 var monthNames = [ "January", "February", "March", "April", "May", "June",
     "July", "August", "September", "October", "November", "December" ];
@@ -33,8 +40,10 @@ var dayNames= ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Satu
 
 var newDate = new Date();
 newDate.setDate(newDate.getDate() + 1);    
-$('h4').html(dayNames[newDate.getDay()] + " " + newDate.getDate() + ' ' + monthNames[newDate.getMonth()] + ' ' + newDate.getFullYear());
-/// 
+$('h4').html('<span id="span">' + dayNames[newDate.getDay()]+ '</span>' + " " + newDate.getDate() + ' ' + monthNames[newDate.getMonth()] + ' ' + newDate.getFullYear()).append('<div id="time">' + newDate.getHours() + ' : ' + newDate.getMinutes() +'</div>');
+
+('LISTA').add('span')
+///
 // $('ul li').click(function {
 // 	('').css( 'text-decoration', 'line-through')
 // }
@@ -43,3 +52,9 @@ $('h4').html(dayNames[newDate.getDay()] + " " + newDate.getDate() + ' ' + monthN
 // $.each(todos, function(index, value){
 //             $("#Todo").append('<div id="LISTA">' + value[i].task + '<div><br>');
 //           }
+var list = document.querySelector('ul');
+list.addEventListener('click', function(ev) {
+  if (ev.target.tagName === 'LI') {
+    ev.target.classList.toggle('checked');
+  }
+}, false);
