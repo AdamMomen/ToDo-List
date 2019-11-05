@@ -1,20 +1,22 @@
 body {	
 	background-image: url("background.jpg");
-	background-size: 100%;
+	background-size:100% 100%; 
+	height: 1000px; 
+	position: relative;
 }
 header {
 	font-family: Comfortaa;
 	margin-left : 350px;
-	font-size: 50px;
+	font-size:50px;
 	height : 150px;
 	 animation-name: Title;
   animation-duration: 15s;
   animation-iteration-count: infinite
 }
 footer {
-  position: relative;
-  top: 390px;
-  left:10px;
+  position: absolute;
+  bottom: 10px ;
+   left:10px;
   width: 300px;
   border: 5px solid #b39f7a;
   border-radius: 25px; 
@@ -25,7 +27,7 @@ footer {
 	margin-left : 40px; 
 }
 #text {
-	text-align: left;
+	text-align: center;
 	font-size: 25px;
 	width : 500px;
 	height: 30px;
@@ -38,7 +40,7 @@ footer {
   	user-select: none;
 }
 #button{
-	width : 100px;
+	width : 60px;
 	height: 35px;
 	left: 550px;
 	border-radius: 25px; 
@@ -59,12 +61,14 @@ footer {
 	box-shadow:
 	box-shadow: 5px 5px #888888; 
 
+
 }
-/*#list{
-	max-height: 10px;
-	overflow: scroll
-	/*text-overflow: 
-*/
+#list{
+		height : 450px ; 
+		width : 40%;
+		overflow-y: scroll;
+	}
+
 
 #button:hover{
 
@@ -119,11 +123,7 @@ footer {
 	  position: relative;
 	user-select: none;
 	  display: grid; 
-}
-.checked{
-	 background: #888;
-  color: #fff;
-  text-decoration: line-through;
+
 }
 #LISTA:nth-child(odd) {
   background: #f9f9f9;
@@ -132,6 +132,7 @@ footer {
 #LISTA:hover {
 	 background: #ddd;
 }
+
 #H1 {
 	position: relative;
 	font-family: comfortaa;	
@@ -151,29 +152,26 @@ footer {
 
 }*/
 @keyframes Title {
-
- 0%    {color: red;
- 		font-size:51px ;
+ 0%    {color: #453823;
+ 		font-size:50px ;
  }
-  25%  {color: yellow;
+  25%  {color: #C0A172;
   		font-size:50px;
   	}
-  50%  {color: blue;
+  50%  {color: #BAA378;
   		font-size:50px
   }
-  100% {color: green;
-  		font-size:51px
+  100% {color: #453823;
+  		font-size:50px
   }
 }
 #H4 {
-
 	position: relative;
 	font-family: oswald;
-	margin: 0px 0px 0px 700px;
-	padding : 0px;
+margin: 0px 0px 0px 700px;
+padding : 0px;
 
-		}
-
+}
 /*#list {
 	font-family: Comfortaa;
 border: 5px solid #b39f7a;
@@ -188,43 +186,15 @@ border: 5px solid #b39f7a;
 }*/
 		img{
 
-			float: top;
+		
 		width: 10%;
 		
 		}
 		#list {
+		
 		}
-		#DATE {
-			font-size:40px; 
-			margin: 0px 0px 30px 1000px;  
-			width: 800px;
-			height:100px;
-			font-family: Comfortaa;
-			
-		}
-		#time{
-			font-size:40px 
-			color
-		}
-		#span{
-			color: red;
-		}
-ul li.checked {
-  background: #888;
-  color: #fff;
-  text-decoration: line-through;
-}
-
-ul li .checked::after {
-  content: '';
-  position: absolute;
-  border-color: #fff;
-  border-style: solid;
-  border-width: 0 2px 2px 0;
-  top: 10px;
-  left: 16px;
-  transform: rotate(45deg);
-  height: 15px;
-  width: 7px;
+		ul::-webkit-scrollbar  {
+  background: transparent;
+  border-radius: 10px;
 }
 
