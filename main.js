@@ -4,34 +4,27 @@ $('#button').click(function () {
 		return alert('Please enter a task !')
 	} else {
 		myTodoList.add(value);
-	 $('#text').val('');	
-	// return	$('#list').append('<div id="DIV"><li>' + value + '</li></div>');
-//return	$('#list').append('<br>'+'<li id="LISTA">' + value + '</li>');
-			return $('#list').append('<br>'+'<li id="LISTA">' + value + '</li>');
-
+	 		$('#text').val('');	
+				return $('#list').prepend('<div id="LISTA">' + value + '<div>');
 	}
 });
 //This is for the enter key press
-$('#text').keypress(function(event){
-            var keycode = (event.keyCode ? event.keyCode : event.which);
-            if(keycode == '13'){
-                 var value = $('#text').val() ; 
-	if (value === '') {
-		return alert('Please enter a task !')
-	} else {
-	 $('#text').val('');
-	 			myTodoList.add(value);	
-	// return	$('#list').append('<div id="DIV"><li>' + value + '</li></div>');
-			//	return	$('#Todo').append('<li id="LISTA">' + value + '</li>')
-			//$.each(todos, function(index, value1){
-				console.log(value1);	
-            $("#Todo").append('<div id="LISTA">' + value + '<div>');
-     // });
+$('#text').keypress(function(event) {
+  var keycode = (event.keyCode ? event.keyCode : event.which);
+  if(keycode == '13') {
+     var value = $('#text').val() ; 
+			if (value === '') {
+				return alert('Please enter a task !')
+					} else {
+						$('#text').val('');
+	 						myTodoList.add(value);	
+       		  		 $("#Todo").prepend('<div id="LISTA">' + value + '<div>');
 		}
 	}
  event.stopPropagation();
 });
-
+/// 
+//$('#').click(function () {
 ///
 // $.each(todos, function(index, value){
 //             $("#Todo").append('<div id="LISTA">' + value[i].task + '<div><br>');
