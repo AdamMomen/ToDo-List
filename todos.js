@@ -73,17 +73,18 @@ function move (from, to) {
         }
       }
       console.log('This is the archived for the reomved items ' + archivedArr);
-      return todos ;
+        return todos ;
     },
     unAcrhive: function (id) {
     for (var i = 0; i < archivedArr.length; i++) {
       console.log('Archived id =' + archivedArr[i])
       if ( archivedArr[i]['id'] === id ) {
         console.log('Archived id =' + archivedArr[i])
-       todos.push(archivedArr[i]);
+          todos.push(archivedArr[i]);
          }
       }   return todos;
     },
+    
     displayArchived: function() {
 
     for (var i = 0; i < archivedArr.length; i++) {

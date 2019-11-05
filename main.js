@@ -1,3 +1,4 @@
+
 $('#button').click(function () {
 	var value = $('#text').val() ; 
 	if (value === '') {
@@ -5,7 +6,7 @@ $('#button').click(function () {
 	} else {
 		myTodoList.add(value);
 	 		$('#text').val('');	
-				return $('#list').prepend('<div id="LISTA">' + value + '<div>');
+				return $('#list').prepend('<li id="LISTA">' + value + '</li>');
 	}
 });
 //This is for the enter key press
@@ -17,14 +18,27 @@ $('#text').keypress(function(event) {
 				return alert('Please enter a task !')
 					} else {
 						$('#text').val('');
-	 						myTodoList.add(value);	
-       		  		 $("#Todo").prepend('<div id="LISTA">' + value + '<div>');
+	 						myTodoList.add(value);
+	 						var time = new Date();
+       		  		 			$("#list").prepend('<li id="LISTA">' + value + ' ' +'<h6 id="H6">'+time.getHours() +': ' + time.getMinutes()  + '</h6></li>');
 		}
 	}
+
  event.stopPropagation();
 });
+///////////
+var monthNames = [ "January", "February", "March", "April", "May", "June",
+    "July", "August", "September", "October", "November", "December" ];
+var dayNames= ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]
+
+var newDate = new Date();
+newDate.setDate(newDate.getDate() + 1);    
+$('h4').html(dayNames[newDate.getDay()] + " " + newDate.getDate() + ' ' + monthNames[newDate.getMonth()] + ' ' + newDate.getFullYear());
 /// 
-//$('#').click(function () {
+// $('ul li').click(function {
+// 	('').css( 'text-decoration', 'line-through')
+// }
+
 ///
 // $.each(todos, function(index, value){
 //             $("#Todo").append('<div id="LISTA">' + value[i].task + '<div><br>');

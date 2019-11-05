@@ -120,6 +120,11 @@ footer {
 	user-select: none;
 	  display: grid; 
 }
+#checked{
+	 background: #888;
+  color: #fff;
+  text-decoration: line-through;
+}
 #LISTA:nth-child(odd) {
   background: #f9f9f9;
 }
@@ -127,7 +132,7 @@ footer {
 #LISTA:hover {
 	 background: #ddd;
 }
-
+checked
 #H1 {
 	position: relative;
 	font-family: comfortaa;	
@@ -186,6 +191,31 @@ border: 5px solid #b39f7a;
 		
 		}
 		#list {
-		
 		}
+		#DATE{
+			margin: 0px 0px 30px 1600px;  
+			width: 800px;
+			height:100px;
+			font-family: Comfortaa;
+			
+		}
+/*ul li.checked {
+  background: #888;
+  color: #fff;
+  text-decoration: line-through;
+}
 
+ul li #checked::before {
+  content: '';
+  position: absolute;
+  border-color: #fff;
+  border-style: solid;
+  border-width: 0 2px 2px 0;
+  top: 10px;
+  left: 16px;
+  transform: rotate(45deg);
+  height: 15px;
+  width: 7px;
+}
+
+*/
