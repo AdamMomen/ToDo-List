@@ -40,7 +40,7 @@ var dayNames= ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Satu
 
 var newDate = new Date();
 newDate.setDate(newDate.getDate() + 1);    
-$('h4').html('<span id="span">' + dayNames[newDate.getDay()]+ '</span>' + " " + newDate.getDate() + ' ' + monthNames[newDate.getMonth()] + ' ' + newDate.getFullYear()).append('<div id="time">' + newDate.getHours() + ' : ' + newDate.getMinutes() +'</div>');
+$('h4').html('<span id="span">' + dayNames[newDate.getDay()]+ '</span>' + " " + newDate.getDate() + ' ' + monthNames[newDate.getMonth()] + ' ' +'<div id="time">' + newDate.getHours() + ' : ' + newDate.getMinutes() +'</div>');
 
 ('LISTA').add('span')
 ///
